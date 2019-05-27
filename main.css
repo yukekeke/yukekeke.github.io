@@ -59,17 +59,13 @@ a {
 .top-navbar:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
-.top-navbar a:visited {
-    color: black;
-}
+
 /* NOTE: add a:active effects */
 
 .top-navbar .contents {
     display: inline;
 }
 .top-navbar .contents li.l {
-    font-family: "DIN altG", Verdana, sans-serif;
-    letter-spacing: .2em;
     float: left;
 }
 .top-navbar .contents li.r {
@@ -77,14 +73,26 @@ a {
 }
 .top-navbar .contents li a {
     display: block;
-    background-clip: text;
     text-align: center;
 }
-.top-navbar .contents li.l a {
+.top-navbar .contents #name a {
+    font-family: "DIN altG", Verdana, sans-serif;
     font-size: 2em;
-    color: black;
-    margin: 1.2em 0 .8em 2em;
+    letter-spacing: .15em;
+    color: transparent;
+    margin: 1.2em 0 .6em 2em;
     padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, 0)), url(img/WangYuke_bg.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+/* IE 10&11 doesn't support "background-clip: text:. Use the media query to provide IE-specific CSS */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .top-navbar .contents #name a {
+        color: black;
+        background-image: none;
+    }
 }
 .top-navbar .contents li.r a {
     font-size: 1.2em;
@@ -95,45 +103,51 @@ a {
 .top-navbar .contents li.rightmost p {
     padding: 2em 5em 2em 0;
 }
-/*
-.top-navbar .contents li.r1 a:hover {
-    background: #f9ded2;
-}
-.top-navbar .contents li.r2 a:hover {
-    background: #ecdbd4;
-}
-.top-navbar .contents li.r3 a:hover {
-    background: #e0d8d8;
-}
-.top-navbar .contents li.r4 a:hover {
-    background: #d0d4d7;
-}
-*/
 
 /* Main elements */
-.main #visualize {
-    width: 60vw;
+.main .widebar {
+    width: 100%;
+    text-align: center;
+}
+.main .widebar .inner-box {
+    display: inline-block;
+}
+.main .widebar#visualize {
+    height: 6em;
     position: absolute;
-    left: 19vw;
     top: 30vh;
 }
-
-.main #seemore {
-    font-size: 1.5vw;
-    letter-spacing: .2vw;
+.main .widebar#visualize .inner-box {
+    height: 15em;
+    width: 50em;
+    background-image: url(img/visualize_text.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main .widebar#seemore {
+    height: 4em;
+    position: absolute;
+    top: 88vh;
+}
+.main .widebar#seemore .inner-box {
+    font-size: 1.2em;
+    letter-spacing: .1em;
     color: white;
-    padding: 1em;
-    border-width: .2vw;
+    width: 10em;
+    padding: 1em 0 1em 0;
+    border-width: .1em;
     border-style: solid;
     border-color: white;
     border-radius: 1vw;
-    
-    position: absolute;
-    left: 42vw;
-    top: 80vh;
+    transition: box-shadow 0.8s cubic-bezier(.25,.8,.25,1);
+}
+.main .widebar#seemore .inner-box:hover {
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, .1), inset .1em .1em .2em rgba(0, 0, 0, .1);
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, .2);
 }
 .main #seemore a {
     color: white;
+    transition: text-shadow 0.5s cubic-bezier(.25,.8,.25,1);
 }
 
 
