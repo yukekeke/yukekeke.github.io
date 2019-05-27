@@ -1,0 +1,150 @@
+/* Add fonts: A free alternative to FF-DIN */
+@font-face {
+    font-family: "DIN alt";
+    src: url("fonts/din1451alt.ttf");
+}
+
+@font-face {
+    font-family: "DIN altG";
+    src: url("fonts/din1451alt G.ttf");
+}
+
+/* Common default styles */
+html, body {
+    height: 100%;
+}
+
+html {
+    font-family: "DIN alt", Verdana, sans-serif;
+    background-color: white;
+}
+
+body {
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Specific elements */
+.container {
+    background-image: url(img/background.png);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Top navigation bar */
+.top-navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background: #f8f8f8;
+    padding: 10px, 0, 10px, 0;
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.top-navbar:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+.top-navbar a:visited {
+    color: black;
+}
+/* NOTE: add a:active effects */
+
+.top-navbar .contents {
+    display: inline;
+}
+.top-navbar .contents li.l {
+    font-family: "DIN altG", Verdana, sans-serif;
+    letter-spacing: .2em;
+    float: left;
+}
+.top-navbar .contents li.r {
+    float: right;
+}
+.top-navbar .contents li a {
+    display: block;
+    background-clip: text;
+    text-align: center;
+}
+.top-navbar .contents li.l a {
+    font-size: 2em;
+    margin: 1.2em 0 .8em 2em;
+    padding: 0;
+}
+.top-navbar .contents li.r a {
+    font-size: 1.2em;
+    color: #404040;
+    margin: 2em 0 0 0;
+    padding: .67em 2em 1.333em 2em;
+}
+.top-navbar .contents li.rightmost p {
+    padding: 2em 5em 2em 0;
+}
+/*
+.top-navbar .contents li.r1 a:hover {
+    background: #f9ded2;
+}
+.top-navbar .contents li.r2 a:hover {
+    background: #ecdbd4;
+}
+.top-navbar .contents li.r3 a:hover {
+    background: #e0d8d8;
+}
+.top-navbar .contents li.r4 a:hover {
+    background: #d0d4d7;
+}
+*/
+
+/* Main elements */
+.main #visualize {
+    width: 60vw;
+    position: absolute;
+    left: 19vw;
+    top: 30vh;
+}
+
+.main #seemore {
+    font-size: 1.5vw;
+    letter-spacing: .2vw;
+    color: white;
+    padding: 1em;
+    border-width: .2vw;
+    border-style: solid;
+    border-color: white;
+    border-radius: 1vw;
+    
+    position: absolute;
+    left: 42vw;
+    top: 80vh;
+}
+.main #seemore a:visited {
+    color: white;
+}
+
+
+.bottom-navbar {
+    text-align: center;
+    height: 2em;
+    padding-top: 1.2em;
+    margin-top: -1.5em;
+    background-color: #f6f3f6;
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bottom-navbar:hover {
+    box-shadow: 0 -14px 28px rgba(0,0,0,0.25);
+}
