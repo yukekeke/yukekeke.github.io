@@ -82,6 +82,7 @@ a {
 }
 .top-navbar .contents li.l a {
     font-size: 2em;
+    color: black;
     margin: 1.2em 0 .8em 2em;
     padding: 0;
 }
@@ -131,7 +132,7 @@ a {
     left: 42vw;
     top: 80vh;
 }
-.main #seemore a:visited {
+.main #seemore a {
     color: white;
 }
 
