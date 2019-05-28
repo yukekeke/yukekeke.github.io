@@ -5,6 +5,7 @@
     <title>Yuke's Collections</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Yukino Hirayaku">
+    <link rel="stylesheet" type="text/css" media="screen" href="navbar.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -13,30 +14,26 @@
     <div class="container">
 
         <!-- Top Navigation Bar -->
-        <div class="top-navbar">
-            <ul class="contents">
-                <!-- Not href to any other pages yet -->
-                <li class="leftmost l"> <p></p> </li>
-                <li class="l1 l" id="name"> <a href="#">WANG Yuke</a></li>
-
-                <li class="rightmost r"> <p></p> </li>
-                <li class="r4 r"> <a href="#">Contact</a></li>
-                <li class="r3 r"> <a href="#">About</a> </li>
-                <li class="r2 r"> <a href="#">Work</a> </li>
-                <li class="r1 r"> <a href="#">Home</a> </li>
-            </ul>
+        <div class="top-navbar shadow">
+            <!-- No href to any other pages yet -->
+            <div class="title">
+                <a href="#">WANG Yuke</a>
+            </div>
+            <div class="menu align-right">
+                <div class="menu-item"> <a href="#">Home</a>    </div>
+                <div class="menu-item"> <a href="#">Work</a>    </div>
+                <div class="menu-item"> <a href="#">About</a>    </div>
+                <div class="menu-item"> <a href="#">Contact</a> </div>
+            </div>
         </div>
 
         <!-- Main Body -->
         <div class="main">
-            <div class="widebar" id="visualize">
-                <div class="inner-box"></div>
-            </div>
             <div class="widebar" id="seemore">
-                <div class="inner-box"> <a href="#"> See my works </a> </div>
+                <a href="#" class="inner-box"> See my works </a>
             </div>
         </div>
-    
+
         <!-- Footer bar -->
 
 

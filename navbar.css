@@ -1,0 +1,46 @@
+/* Top navigation bar */
+.top-navbar {
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 90;
+    background: #f8f8f8;
+}
+
+.top-navbar.shadow {
+    box-shadow: 0 .2em .4em rgba(0,0,0,0.3);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.top-navbar.shadow:hover {
+    box-shadow: 0 1.2em 2em rgba(0,0,0,0.2);
+}
+
+/* Elements in the top nav bar*/
+.top-navbar .title, .top-navbar .menu, .top-navbar .menu-item {
+    text-align: center;
+    display: inline-block;
+}
+
+.top-navbar .title, .top-navbar .menu {
+    margin: 1em;
+}
+
+.top-navbar .menu-item {
+    margin: 0 1em;
+}
+
+/* Make the child elements of current div align to left */
+.top-navbar div.align-left {
+    text-align: left;
+}
+/* Make the child elements of current div align to right */
+.top-navbar div.align-right {
+    text-align: right;
+}
+
+.top-navbar a {
+    color: black;
+    text-decoration: none;
+}

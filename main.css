@@ -36,52 +36,23 @@ a {
 
 /* Specific elements */
 .container {
-    background-image: url(img/background.png);
+    background: url(img/visualize_text.png) no-repeat center top 44%, url(img/background.png) no-repeat center;
     /* Full height */
     height: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Top navigation bar */
-.top-navbar {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    background: #f8f8f8;
-    padding: 10px, 0, 10px, 0;
-    width: 100%;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.12);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.top-navbar:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+    background-size: 51.65em 15em, cover;
 }
 
 /* NOTE: add a:active effects */
-
-.top-navbar .contents {
-    display: inline;
+.top-navbar .title {
+    margin-left: 3.6em;
+    margin-top: 2.4em;
+    margin-bottom: 1.6em;
 }
-.top-navbar .contents li.l {
-    float: left;
-}
-.top-navbar .contents li.r {
-    float: right;
-}
-.top-navbar .contents li a {
-    display: block;
-    text-align: center;
-}
-.top-navbar .contents #name a {
+.top-navbar .title a {
     font-family: "DIN altG", Verdana, sans-serif;
     font-size: 2em;
     letter-spacing: .15em;
     color: transparent;
-    margin: 1.2em 0 .6em 2em;
-    padding: 0;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, 0)), url(img/WangYuke_bg.png);
     background-clip: text;
     -webkit-background-clip: text;
@@ -89,34 +60,43 @@ a {
 }
 /* IE 10&11 doesn't support "background-clip: text:. Use the media query to provide IE-specific CSS */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .top-navbar .contents #name a {
+    .top-navbar .title a {
         color: black;
         background-image: none;
     }
 }
-.top-navbar .contents li.r a {
+
+.top-navbar .menu {
+    width: 83.33%;
+    /* 100% width - width_of_title */
+    width: calc(100% - 20em);
+    box-sizing: border-box;
+    padding-right: 4em;
+}
+.top-navbar .menu-item a {
     font-size: 1.2em;
     color: #404040;
-    margin: 2em 0 0 0;
-    padding: .67em 2em 1.333em 2em;
-}
-.top-navbar .contents li.rightmost p {
-    padding: 2em 5em 2em 0;
 }
 
 /* Main elements */
-.main .widebar {
+.widebar {
     width: 100%;
+    height: auto;
     text-align: center;
 }
-.main .widebar .inner-box {
+
+.widebar .inner-box {
     display: inline-block;
 }
-.main .widebar#visualize {
-    height: 6em;
-    position: absolute;
+
+.widebar#visualize {
+    position: relative;
     top: 30vh;
 }
+
+.widebar#visualize .inner-box {
+}
+    /*
 .main .widebar#visualize .inner-box {
     height: 15em;
     width: 50em;
@@ -124,11 +104,14 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.main .widebar#seemore {
+*/
+
+.widebar#seemore {
     height: 4em;
-    position: absolute;
+    position: relative;
     top: 88vh;
 }
+
 .main .widebar#seemore .inner-box {
     font-size: 1.2em;
     letter-spacing: .1em;
@@ -138,16 +121,12 @@ a {
     border-width: .1em;
     border-style: solid;
     border-color: white;
-    border-radius: 1vw;
-    transition: box-shadow 0.8s cubic-bezier(.25,.8,.25,1);
+    border-radius: .8vw;
+    transition: box-shadow 0.5s cubic-bezier(.25,.8,.25,1), text-shadow 0.5s cubic-bezier(.25,.8,.25,1);
 }
 .main .widebar#seemore .inner-box:hover {
     box-shadow: .1em .1em .2em rgba(0, 0, 0, .1), inset .1em .1em .2em rgba(0, 0, 0, .1);
-    text-shadow: .1em .1em .2em rgba(0, 0, 0, .2);
-}
-.main #seemore a {
-    color: white;
-    transition: text-shadow 0.5s cubic-bezier(.25,.8,.25,1);
+    text-shadow: .1em .1em .2em rgba(0, 0, 0, .15);
 }
 
 
